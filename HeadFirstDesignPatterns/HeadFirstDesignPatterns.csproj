@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5EE4072C-1FE7-42ED-A86B-84C2B54CA41C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HeadFirstDesignPatterns</RootNamespace>
+    <AssemblyName>HeadFirstDesignPatterns</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapter\DuckAdapter.cs" />
+    <Compile Include="Adapter\IDuck.cs" />
+    <Compile Include="Adapter\ITurkey.cs" />
+    <Compile Include="Adapter\MallardDuck.cs" />
+    <Compile Include="Adapter\TurkeyAdapter.cs" />
+    <Compile Include="Adapter\WildTurkey.cs" />
+    <Compile Include="Command\CeilingFan.cs" />
+    <Compile Include="Command\CeilingFanHighCommand.cs" />
+    <Compile Include="Command\CeilingFanLowCommand.cs" />
+    <Compile Include="Command\CeilingFanMediumCommand.cs" />
+    <Compile Include="Command\CeilingFanOffCommand.cs" />
+    <Compile Include="Command\CeilingFanOnCommand.cs" />
+    <Compile Include="Command\GarageDoor.cs" />
+    <Compile Include="Command\GarageDoorCloseCommand.cs" />
+    <Compile Include="Command\GarageDoorOpenCommand.cs" />
+    <Compile Include="Command\Hottub.cs" />
+    <Compile Include="Command\HottubOffCommand.cs" />
+    <Compile Include="Command\HottubOnCommand.cs" />
+    <Compile Include="Command\ICommand.cs" />
+    <Compile Include="Command\LightOffCommand.cs" />
+    <Compile Include="Command\LightOnCommand.cs" />
+    <Compile Include="Command\Light.cs" />
+    <Compile Include="Command\MacroCommand.cs" />
+    <Compile Include="Command\NoCommand.cs" />
+    <Compile Include="Command\RemoteControl.cs" />
+    <Compile Include="Command\SimpleRemoteControl.cs" />
+    <Compile Include="Command\Stereo.cs" />
+    <Compile Include="Command\StereoOffCommand.cs" />
+    <Compile Include="Command\StereoOnCommand.cs" />
+    <Compile Include="Command\StereoOnWithCDCommand.cs" />
+    <Compile Include="Command\TV.cs" />
+    <Compile Include="Command\TVOffCommand.cs" />
+    <Compile Include="Command\TVOnCommand.cs" />
+    <Compile Include="Composite\CompositeIterator.cs" />
+    <Compile Include="Composite\Menu.cs" />
+    <Compile Include="Composite\MenuComponent.cs" />
+    <Compile Include="Composite\MenuItem.cs" />
+    <Compile Include="Composite\NullIterator.cs" />
+    <Compile Include="Composite\TestCompositeIterator.cs" />
+    <Compile Include="Composite\Waitress.cs" />
+    <Compile Include="CompoundPatternExamples\DuckReunion\AbstractDuckFactory.cs" />
+    <Compile Include="CompoundPatternExamples\DuckReunion\AbstractGooseFactory.cs" />
+    <Compile Include="CompoundPatternExamples\DuckReunion\CountingDuckFactory.cs" />
+    <Compile Include="CompoundPatternExamples\DuckReunion\DuckCall.cs" />
+    <Compile Include="CompoundPatternExamples\DuckReunion\Flock.cs" />
+    <Compile Include="CompoundPatternExamples\DuckReunion\Goose.cs" />
+    <Compile Include="CompoundPatternExamples\DuckReunion\GooseAdapter.cs" />
+    <Compile Include="CompoundPatternExamples\DuckReunion\GooseDuckFactory.cs" />
+    <Compile Include="CompoundPatternExamples\DuckReunion\IObserver.cs" />
+    <Compile Include="CompoundPatternExamples\DuckReunion\IQuackable.cs" />
+    <Compile Include="CompoundPatternExamples\DuckReunion\IQuackObservable.cs" />
+    <Compile Include="CompoundPatternExamples\DuckReunion\MallardDuck.cs" />
+    <Compile Include="CompoundPatternExamples\DuckReunion\Observable.cs" />
+    <Compile Include="CompoundPatternExamples\DuckReunion\QuackCounterDecorator.cs" />
+    <Compile Include="CompoundPatternExamples\DuckReunion\Quackologist.cs" />
+    <Compile Include="CompoundPatternExamples\DuckReunion\RedheadDuck.cs" />
+    <Compile Include="CompoundPatternExamples\DuckReunion\RubberDuck.cs" />
+    <Compile Include="CompoundPatternExamples\DuckReunion\SimpleDuckFactory.cs" />
+    <Compile Include="Decorator\DarkRoast.cs" />
+    <Compile Include="Decorator\Decaf.cs" />
+    <Compile Include="Decorator\Enums.cs" />
+    <Compile Include="Decorator\Espresso.cs" />
+    <Compile Include="Decorator\HouseBlend.cs" />
+    <Compile Include="Decorator\IBeverage.cs" />
+    <Compile Include="Decorator\ICondimentDecorator.cs" />
+    <Compile Include="Decorator\Mocha.cs" />
+    <Compile Include="Decorator\Soy.cs" />
+    <Compile Include="Decorator\Whip.cs" />
+    <Compile Include="Facade\Amplifier.cs" />
+    <Compile Include="Facade\CdPlayer.cs" />
+    <Compile Include="Facade\DvdPlayer.cs" />
+    <Compile Include="Facade\HomeTheaterFacade.cs" />
+    <Compile Include="Facade\PopcornPopper.cs" />
+    <Compile Include="Facade\Projector.cs" />
+    <Compile Include="Facade\Screen.cs" />
+    <Compile Include="Facade\TheaterLights.cs" />
+    <Compile Include="Facade\Tuner.cs" />
+    <Compile Include="Factory\AbstractFactory\BlackOlives.cs" />
+    <Compile Include="Factory\AbstractFactory\Cheese.cs" />
+    <Compile Include="Factory\AbstractFactory\CheesePizza.cs" />
+    <Compile Include="Factory\AbstractFactory\ChicagoPizzaIngredientFactory.cs" />
+    <Compile Include="Factory\AbstractFactory\ChicagoPizzaStore.cs" />
+    <Compile Include="Factory\AbstractFactory\ClamPizza.cs" />
+    <Compile Include="Factory\AbstractFactory\Clams.cs" />
+    <Compile Include="Factory\AbstractFactory\Dough.cs" />
+    <Compile Include="Factory\AbstractFactory\EggPlant.cs" />
+    <Compile Include="Factory\AbstractFactory\FreshClams.cs" />
+    <Compile Include="Factory\AbstractFactory\FrozenClams.cs" />
+    <Compile Include="Factory\AbstractFactory\Garlic.cs" />
+    <Compile Include="Factory\AbstractFactory\IPizzaIngredientFactory.cs" />
+    <Compile Include="Factory\AbstractFactory\MarinaraSauce.cs" />
+    <Compile Include="Factory\AbstractFactory\Mozzarella.cs" />
+    <Compile Include="Factory\AbstractFactory\Mushroom.cs" />
+    <Compile Include="Factory\AbstractFactory\NYPizzaIngredientFactory.cs" />
+    <Compile Include="Factory\AbstractFactory\NYPizzaStore.cs" />
+    <Compile Include="Factory\AbstractFactory\Onion.cs" />
+    <Compile Include="Factory\AbstractFactory\Pepperoni.cs" />
+    <Compile Include="Factory\AbstractFactory\Pizza.cs" />
+    <Compile Include="Factory\AbstractFactory\PizzaStore.cs" />
+    <Compile Include="Factory\AbstractFactory\PlumTomatoSauce.cs" />
+    <Compile Include="Factory\AbstractFactory\RedPepper.cs" />
+    <Compile Include="Factory\AbstractFactory\ReggianoCheese.cs" />
+    <Compile Include="Factory\AbstractFactory\Sauce.cs" />
+    <Compile Include="Factory\AbstractFactory\SlicedPepperoni.cs" />
+    <Compile Include="Factory\AbstractFactory\Spinach.cs" />
+    <Compile Include="Factory\AbstractFactory\ThickCrustDough.cs" />
+    <Compile Include="Factory\AbstractFactory\ThinCrustDough.cs" />
+    <Compile Include="Factory\AbstractFactory\Veggies.cs" />
+    <Compile Include="Factory\FactoryMethod\ChicagoStyleCheesePizza.cs" />
+    <Compile Include="Factory\FactoryMethod\ChicagoStyleClamPizza.cs" />
+    <Compile Include="Factory\FactoryMethod\ChicagoStylePepperoniPizza.cs" />
+    <Compile Include="Factory\FactoryMethod\ChicagoStylePizzaStore.cs" />
+    <Compile Include="Factory\FactoryMethod\ChicagoStyleVeggiePizza.cs" />
+    <Compile Include="Factory\FactoryMethod\NYStyleCheesePizza.cs" />
+    <Compile Include="Factory\FactoryMethod\NYStyleClamPizza.cs" />
+    <Compile Include="Factory\FactoryMethod\NYStylePepperoniPizza.cs" />
+    <Compile Include="Factory\FactoryMethod\NYStylePizzaStore.cs" />
+    <Compile Include="Factory\FactoryMethod\NYStyleVeggiePizza.cs" />
+    <Compile Include="Factory\FactoryMethod\Pizza.cs" />
+    <Compile Include="Factory\FactoryMethod\PizzaStore.cs" />
+    <Compile Include="Factory\SimpleFactory\CheesePizza.cs" />
+    <Compile Include="Factory\SimpleFactory\ClamPizza.cs" />
+    <Compile Include="Factory\SimpleFactory\PepperoniPizza.cs" />
+    <Compile Include="Factory\SimpleFactory\Pizza.cs" />
+    <Compile Include="Factory\SimpleFactory\PizzaStore.cs" />
+    <Compile Include="Factory\SimpleFactory\SimplePizzaFactory.cs" />
+    <Compile Include="Factory\SimpleFactory\VeggiePizza.cs" />
+    <Compile Include="Iterator\ArrayListIterator.cs" />
+    <Compile Include="Iterator\CafeMenu.cs" />
+    <Compile Include="Iterator\DictionaryIterator.cs" />
+    <Compile Include="Iterator\DinerMenu.cs" />
+    <Compile Include="Iterator\ArrayIterator.cs" />
+    <Compile Include="Iterator\IMenu.cs" />
+    <Compile Include="Iterator\Iterator.cs" />
+    <Compile Include="Iterator\MenuItem.cs" />
+    <Compile Include="Iterator\PancakeHouseMenu.cs" />
+    <Compile Include="Iterator\Waitress.cs" />
+    <Compile Include="Observer\CurrentConditionsDisplay.cs" />
+    <Compile Include="Observer\ForecastDisplay.cs" />
+    <Compile Include="Observer\IDisplayElement.cs" />
+    <Compile Include="Observer\IObserver.cs" />
+    <Compile Include="Observer\ISubject.cs" />
+    <Compile Include="Observer\StatisticsDisplay.cs" />
+    <Compile Include="Observer\WeatherData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxy\Virtual\Icon.cs" />
+    <Compile Include="Proxy\Virtual\Image.cs" />
+    <Compile Include="Proxy\Virtual\ImageProxy.cs" />
+    <Compile Include="Singleton\ChocolateBoiler.cs" />
+    <Compile Include="State\GumballMachine.cs" />
+    <Compile Include="State\HasQuarterState.cs" />
+    <Compile Include="State\IState.cs" />
+    <Compile Include="State\NoQuarterState.cs" />
+    <Compile Include="State\SoldOutState.cs" />
+    <Compile Include="State\SoldState.cs" />
+    <Compile Include="State\WinnerState.cs" />
+    <Compile Include="Strategy\Duck.cs" />
+    <Compile Include="Strategy\FlyWithWings.cs" />
+    <Compile Include="Strategy\IFlyBehavior.cs" />
+    <Compile Include="Strategy\IQuackBehavior.cs" />
+    <Compile Include="Strategy\MallardDuck.cs" />
+    <Compile Include="Strategy\NoFly.cs" />
+    <Compile Include="Strategy\NoQuack.cs" />
+    <Compile Include="Strategy\SimpleQuack.cs" />
+    <Compile Include="Strategy\Squeak.cs" />
+    <Compile Include="TemplateMethod\CaffeineBeverage.cs" />
+    <Compile Include="TemplateMethod\Coffee.cs" />
+    <Compile Include="TemplateMethod\Tea.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
